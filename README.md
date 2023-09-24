@@ -19,7 +19,7 @@
 ![image](https://github.com/Ryan-shadow/spotdl-plus/assets/121378653/da84b464-b28e-452e-afd6-44cd6366b0e2)
 * Copy ```Client ID``` and ```Client secret``` to ```config.json```
 * Change ```SaveDircetory``` to where you want to save all of downloaded playlists (use ```/``` not ```\``` !!!)
-
+## Never delete ```config.json```
 ### VVV__ If you're useing python __VVV
 ### ONLY WORKS ON PYTHON 3.9.0 ! 
 ### [https://www.python.org/downloads/release/python-390/](https://www.python.org/downloads/release/python-390/#:~:text=Full%20Changelog-,Files,-Version)
