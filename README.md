@@ -6,6 +6,7 @@
 ### Necessary installation packages command
 ```
 pip install spotipy
+pip install spotdl
 ```
 ### ONLY WORKS ON PYTHON 3.9.0 !
 
