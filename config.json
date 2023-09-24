@@ -3,5 +3,4 @@
     "client_id": "5ddbe68a75404dfcbb6d98ac888ab6be",
     "client_secret": "6ad79841140740818a9649cb72367f0e",
     "redirect_uri" : "http://localhost:8080/callback"
-
 }

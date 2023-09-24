@@ -38,31 +38,34 @@ except AttributeError as e:
             url_type = "track"
         except AttributeError as e:
             url_type = "UNKNOW_TYPE!"
-print(f"A {url_type}")
-
+print(f"Object id : {object_id}")
 if url_type == "playlist" :
     folder_name = sp.playlist(object_id)['name']
     print(f"Playlist Name: {folder_name}")
+    folder_path = str(os.path.join(DownloadHomePath, folder_name))
 
 elif url_type == "album":
     folder_name = sp.album(object_id)['name']
     print(f"Album Name: {folder_name}")
+    folder_path = str(os.path.join(DownloadHomePath, folder_name))
 elif url_type == "track":
     folder_name = "tracks"
     print(f"Track Name: {folder_name}")
+    ArtistName = sp.track(object_id)['artists'][0]['name']
+    folder_path = str(os.path.join(DownloadHomePath, folder_name , ArtistName))
 else:
     print(f"A {url_type} , {e}") 
     sys.exit()
 
 
 # check is folder was exists
-folder_path = str(os.path.join(DownloadHomePath, folder_name))
+
 
 if not os.path.exists(folder_path):
     os.makedirs(folder_path)
-    print(f"folder '{folder_name}' successfully created in '{DownloadHomePath}'")
+    print(f"Folder '{folder_name}' successfully created in '{DownloadHomePath}'")
 else:
-    print(f"folder '{folder_name}' already exists in '{DownloadHomePath}'")
+    print(f"Folder '{folder_name}' already exists in '{DownloadHomePath}'")
 print(f"Ready to download to {folder_path} ")
 try:
     print(f"Ready to run: spotdl {object_url} --output {folder_path}")
