@@ -1,7 +1,7 @@
 # Spotdl-Plus
  
 
-## Playlist2floder.py
+## Spotifly To Folder.py
 
 ### Necessary installation packages command
 ```
