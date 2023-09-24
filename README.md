@@ -9,6 +9,7 @@ pip install spotipy
 pip install spotdl
 ```
 ### ONLY WORKS ON PYTHON 3.9.0 !
+## [https://www.python.org/downloads/release/python-390/](https://www.python.org/downloads/release/python-390/#:~:text=Full%20Changelog-,Files,-Version)
 
 ### Create a Spotifly developer account & Other settings
 
