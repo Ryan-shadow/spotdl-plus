@@ -2,19 +2,25 @@ import subprocess
 import re
 import os
 import sys
+import json
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
-DownloadHomePath = r"E:\Users\Ryan\Music\Spotifly" #YOUR HOME DIRCETORY
 print("|          Welcom :)                                             |")
 print("|    By Lin Zit Ting On Github https://github.com/Ryan-shadow    |")
 print("|________________________________________________________________|")
 print("")
 
+# open json config file
+with open('config.json', 'r') as json_file:
+    ConfigData = json.load(json_file)
+
+DownloadHomePath = ConfigData["SaveDircetory"] #YOUR HOME DIRCETORY
+
 #spotipy config
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='your client_id',
-                                               client_secret='your client_secret',
-                                               redirect_uri='http://localhost:8080/callback',
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=ConfigData["client_id"],
+                                               client_secret=ConfigData["client_secret"],
+                                               redirect_uri=ConfigData["redirect_uri"],
                                                scope='user-library-read'))
 object_url = input("Enter the Spotify Playlist , Album or Track URL: ")
 # Spotify playlist url
