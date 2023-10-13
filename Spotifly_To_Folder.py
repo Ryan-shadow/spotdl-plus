@@ -11,8 +11,11 @@ print("|    By Lin Zit Ting On Github https://github.com/Ryan-shadow    |")
 print("|________________________________________________________________|")
 print("")
 
+# get config file path
+config_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.json')
+
 # open json config file
-with open('config.json', 'r') as json_file:
+with open(config_file_path, 'r') as json_file:
     ConfigData = json.load(json_file)
 
 DownloadHomePath = ConfigData["SaveDircetory"] #YOUR HOME DIRCETORY
