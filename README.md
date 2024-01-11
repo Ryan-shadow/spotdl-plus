@@ -27,4 +27,5 @@
 ```
 pip install spotipy
 pip install spotdl
+pip install google-api-python-client
 ```
