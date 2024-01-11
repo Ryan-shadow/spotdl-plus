@@ -2,7 +2,8 @@
  
 ## Spotifly To Folder
 
-
+###If you don't have ffmpeg on your pc , INSTALL IT BELOW
+```pip install FFmpeg```
 
 
 ### Create a Spotifly developer account & Other settings
